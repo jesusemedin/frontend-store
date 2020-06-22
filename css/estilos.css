@@ -39,7 +39,6 @@ h2{
     text-transform: uppercase;
 }
 .lista-productos{
-    margin-top: 40px;
     padding: 0;
 }
 .lista-productos li {
@@ -53,23 +52,51 @@ h2{
 /* se usa para centrar el texto o contenido */
     text-align: center;
 }
+.lista-productos li:nth-child(2n+1) {
+    clear: both;
+}
 @media (min-width: 768px){
     .lista-productos li{
     float: left;
     /* esto va a divir de manera proporcional el espacio de la lista de productos */
     width: 33.3%;
     }
+    .lista-productos li:nth-child(2n+1) {
+        clear: unset;
+    }
+    .lista-productos li:nth-child(3n+1) {
+        clear: both;
+    }
 }
 .lista-productos li img{
+    /* Se usa para agregarle un borde a un elemento */
     border: 10px solid rgba(16, 16, 110, 0.295);
-    transition: border-color .78s ease-in-out;
+    /* se usa para causar un efecto de transicion al pasar el mouse por encima de la imagen  */
+    transition: border-color .6s ease-in-out;
 }
 .lista-productos li img:hover {
     border: 10px solid rgb(132, 132, 255);
 }
 .lista-productos li p{
-
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
 }
 .lista-productos li p span{
-    
+    color: #ffce00;
+    font-size: 40px;
+}
+.boton{
+    background-color: #daae00;
+    padding: 10px 40px;
+    margin-top: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover{
+    background-color: #695400;
 }
