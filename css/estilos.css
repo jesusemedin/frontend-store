@@ -1,4 +1,75 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+/* Este codigo se usa para que el padding no afecte el ancho total de una caja */
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
 body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
     background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     background-attachment: fixed;
+}
+header{
+    /* Text aling: center es una propieda que se usa para centrar texto, pero tambien permite centrar imagenes, margin 0 auto no va a permitirlo */
+    text-align: center;
+    /* Se agrega un padding de 40px arriba y abajo y 0 a los lados */
+    padding: 40px 0; 
+}
+img {
+    /* esto hara que todas las imagenes del sitio web sean responsivas */
+    max-width: 100%;
+}
+.contenedor{
+    /* Este sera el maximo ancho que tendra el contenedor */
+    max-width: 1200px;
+    /* margin 0 auto para centrar */
+    margin: 0 auto;
+}
+.hero{
+    margin-bottom: 40px;
+}
+h2{
+    /* se usa para centrar */
+    text-align: center;
+    /* se usa para colocar todas las letras en mayuscula */
+    text-transform: uppercase;
+}
+.lista-productos{
+    margin-top: 40px;
+    padding: 0;
+}
+.lista-productos li {
+    float: left;
+    /* esto va a divir de manera proporcional el espacio de la lista de productos */
+    width: 50%;
+    /* se usa para espaciar los elementos */
+    padding: 20px;
+    /* se usa para quitar las vinetas de las listas */
+    list-style: none;
+/* se usa para centrar el texto o contenido */
+    text-align: center;
+}
+@media (min-width: 768px){
+    .lista-productos li{
+    float: left;
+    /* esto va a divir de manera proporcional el espacio de la lista de productos */
+    width: 33.3%;
+    }
+}
+.lista-productos li img{
+    border: 10px solid rgba(16, 16, 110, 0.295);
+    transition: border-color .78s ease-in-out;
+}
+.lista-productos li img:hover {
+    border: 10px solid rgb(132, 132, 255);
+}
+.lista-productos li p{
+
+}
+.lista-productos li p span{
+    
 }
